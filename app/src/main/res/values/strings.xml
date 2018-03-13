@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">tjj0008HAIKU</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="adjective">Adjectives</string>
+    <string name="noun">Nouns</string>
+    <string name="verb">Verbs</string>
+    <string name="other">Other</string>
+    <string name="line1">1)</string>
+    <string name="line2">2)</string>
+    <string name="line3">3)</string>
+    <string name="delete">DELETE THE LAST WORD ADDED</string>
+    <string name="restart">START OVER</string>
+    <string name="display">DISPLAY</string>
+    <string name="addToHaiku">Add \n\'%1$s\'\nto the haiku</string>
+</resources>

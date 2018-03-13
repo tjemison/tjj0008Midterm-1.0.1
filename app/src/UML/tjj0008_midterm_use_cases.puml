@@ -1,0 +1,209 @@
+@startsalt
+{
+{T
++ Modify Haiku
+++ Goal
++++ To allow the user to change the haiku by adding or deleting words.
+++ Entry Condition
++++ The application has started
+++ Scenario
++++ The user chooses to:
+++++ Add a noun
+++++ Add a verb
+++++ Add an adjective
+++++ Add an other type of word
++++ The selected word is added to the haiku
++++ After the first word is added, the user can remove the most recent word added.
++++ The above steps are repeated until the user is satisfied with the haiku.
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The view is updated with the changes made to the haiku.
++++ Failure Exit Conditions
+++++ None
+
+
+}
+---
+{T
++ Add noun
+++ Goal
++++ To add a specified noun to the haiku.
+++ Entry Conditions
++++ Words can still be added to the haiku
+++ Scenario
++++ The user chooses to add a noun to the haiku
++++ The user picks the noun
++++ The noun is added to the haiku
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The noun was added to the haiku
++++ Failure Exit Conditions
+++++ None
+
+}
+---
+
+{T
++ Add verb
+++ Goal
++++ To add a specified verb to the haiku.
+++ Entry Conditions
++++ Words can still be added to the haiku
+++ Scenario
++++ The user chooses to add a verb to the haiku
++++ The user picks the verb
++++ The verb is added to the haiku
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The verb was added to the haiku
++++ Failure Exit Conditions
+++++ None
+
+}
+---
+{T
++ Add adjective
+++ Goal
++++ To add a specified adjective to the haiku.
+++ Entry Conditions
++++ Words can still be added to the haiku
+++ Scenario
++++ The user chooses to add an adjective to the haiku
++++ The user picks the adjective
++++ The adjective is added to the haiku
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The adjective was added to the haiku
++++ Failure Exit Conditions
+++++ None
+}
+
+---
+
+{T
++ Add other words
+++ Goal
++++ To add another type of word to the haiku.
+++ Entry Conditions
++++ Words can still be added to the haiku
+++ Scenario
++++ The user chooses to add another type of word to the haiku
++++ The user picks the word of the "other type"
++++ The word is added to the haiku
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The word was added to the haiku
++++ Failure Exit Conditions
+++++ None
+}
+
+---
+
+{T
++ Delete word
+++ Goal
++++ To delete the most recently added word from the haiku.
+++ Entry Condition
++++ At least one word has been added to the haiku.
+++ Scenario
++++ The user adds a word to the haiku
++++ The user chooses to delete a word from the haiku
++++ The most recently added word is deleted from the haiku
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The most recently added word is deleted from the haiku.
++++ Failure Exit Conditions
+++++ None
+}
+
+---
+
+{T
++ View haiku
+++ Goal
++++ To view the current state of the haiku in a separate view.
+++ Entry Conditions
++++ At least one word has been added to the haiku.
+++ Scenario
++++ The user is shown the haiku, which consists of:
++++ One line with five syllables
++++ Another line with seven syllables
++++ A final line with five syllables
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The user returns to modify the haiku
++++ Failure Exit Conditions
+++++ None
+
+
+}
+
+---
+
+{T
++ Start over
+++ Goal
++++ To remove all words from the haiku and return the app to its starting state.
+++ Entry Conditions
++++ At least one word has been selected to add to the haiku
+++ Scenario
++++ The user adds one or more words to the haiku
++++ The user chooses to start over
++++ The application removes all words from the existing haiku and returns to its starting state.
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The application has returned to its starting state
++++ Failure Exit Conditions
+++++ None
+
+}
+---
+
+{T
++ Return to haiku
+++ Goal
++++ To allow the user to edit the haiku after viewing it.
+++ Entry Conditions
++++ The user is viewing the haiku
+++ Scenario
++++ The haiku is being displayed
++++ The user chooses to return to the previous screen.
++++ The user can modify the haiku once again.
+++ Exceptions
++++ None
+++ Exit Conditions
++++ Successful Exit Conditions
+++++ The user can modify the haiku again.
++++ Failure Exit Conditions
+++++ None.
+}
+
+---
+
+/' {T
++ Populate
+++ Goal
++++ To populate the spinner with words
+++ Entry Conditions
++++ The spinner has no words
+++ Scenario
+}
+ '/
+}
+@endsalt

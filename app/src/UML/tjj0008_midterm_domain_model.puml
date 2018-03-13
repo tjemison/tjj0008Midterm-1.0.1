@@ -1,0 +1,28 @@
+@startuml
+
+class Word {
+    numberOfSyllables
+    isNoun
+    isAdjective
+    isVerb
+    isOther
+}
+
+class Haiku {
+
+}
+
+class Line {
+    remainingSyllables
+}
+
+class Spinner {
+
+}
+
+Haiku "1" o-- "3" Line: consists of >
+Line "1" o-- "*" Word: consists of >
+Spinner "1" *-- "*" Word: contains >
+hide empty members
+hide empty methods
+@enduml

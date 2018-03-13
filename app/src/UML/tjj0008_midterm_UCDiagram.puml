@@ -1,0 +1,30 @@
+@startuml
+actor User
+' actor Spinner
+
+rectangle {
+    usecase "Modify haiku" as UC1
+    usecase "Add noun" as UC2
+    usecase "Add verb" as UC3
+    usecase "Add adjective" as UC4
+    usecase "Add other words" as UC5
+    usecase "Delete word" as UC6
+    usecase "View haiku" as UC7
+    usecase "Start over" as UC8
+    usecase "Return to haiku" as UC9
+    ' usecase "Populate" as UC10
+
+    User -- UC1
+    User -- UC7
+    User -- UC8
+
+    ' Spinner -- UC10
+
+    UC1 ..> UC2 : <<includes>>
+    UC1 ..> UC3 : <<includes>>
+    UC1 ..> UC4 : <<includes>>
+    UC1 ..> UC5 : <<includes>>
+    UC1 ..> UC6 : <<includes>>
+    UC7 ..> UC9 : <<includes>>
+}
+@enduml

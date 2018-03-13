@@ -1,0 +1,46 @@
+@startuml
+title Midterm: Haiku SSD
+actor User
+participant Haiku_Generator
+actor Spinner
+participant Word
+
+group SD: Haiku
+
+User -> Haiku_Generator: Start
+
+loop while (haiku is not completed)
+
+alt (User wishes to add a word to haiku)
+Spinner -> Word: becomes populated with
+User -> Spinner: can choose word from
+Haiku_Generator <-- Spinner: user selected word is added
+User <-- Haiku_Generator: adds in-progress haiku to current view
+
+end
+
+alt (at least one word has been added to haiku)
+
+alt (User wishes to delete word from haiku)
+User -> Haiku_Generator: requests deletion of word
+User <-- Haiku_Generator: adds haiku with most recently added word deleted to current view.
+end
+
+alt (User wishes to start over)
+User -> Haiku_Generator: requests to start over
+User <-- Haiku_Generator: initial state of application
+end
+
+alt (User wishes to view current haiku)
+User -> Haiku_Generator: requests to view haiku
+User <-- Haiku_Generator: displays in-progress haiku
+end
+
+end
+
+end
+
+User -> Haiku_Generator: requests to view haiku
+User <-- Haiku_Generator: displays completed haiku
+end
+@enduml
